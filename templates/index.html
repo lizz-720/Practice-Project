@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Buddies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script defer src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-card">
+        <p class="hero-subtitle">Study Buddies</p>
+        <h1>Build smarter study sessions together.</h1>
+        <p>
+          Create custom flashcards, practice quizzes, and fill-in-the-blank drills while
+          keeping time with an integrated focus timer.
+        </p>
+        <div class="hero-actions">
+          <button class="primary" type="button">Start Studying</button>
+          <button class="ghost" type="button">Invite a Buddy</button>
+        </div>
+      </div>
+      <div class="hero-details">
+        <h2>Project Snapshot</h2>
+        <ul>
+          <li><strong>Course:</strong> CPSC 362</li>
+          <li><strong>Instructor:</strong> Professor Mehdi Peiravi</li>
+          <li><strong>Team:</strong> Julian Jimenez, Lizbeth Aguilar, Fianna Tran</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="features">
+        <h2>Study Toolkit</h2>
+        <div class="grid">
+          <article>
+            <h3>Flashcards</h3>
+            <p>Flip curated cards to reinforce key concepts.</p>
+            <div class="flashcard" id="flashcard">
+              <div class="flashcard-inner">
+                <div class="flashcard-front" id="flashcard-front">What is Python?</div>
+                <div class="flashcard-back" id="flashcard-back">
+                  A versatile programming language used for web, data, and automation.
+                </div>
+              </div>
+            </div>
+            <button class="ghost" type="button" id="flashcard-next">Next Card</button>
+          </article>
+
+          <article>
+            <h3>Focus Timer</h3>
+            <p>Stay on track with a simple 25-minute focus cycle.</p>
+            <div class="timer" aria-live="polite">
+              <span id="timer-display">25:00</span>
+            </div>
+            <div class="timer-actions">
+              <button class="primary" type="button" id="timer-start">Start</button>
+              <button class="ghost" type="button" id="timer-pause">Pause</button>
+              <button class="ghost" type="button" id="timer-reset">Reset</button>
+            </div>
+          </article>
+
+          <article>
+            <h3>Fill in the Blank</h3>
+            <p>Test recall by completing a key statement.</p>
+            <div class="quiz-box">
+              <p>
+                HTML stands for <span class="blank">_______</span> Markup Language.
+              </p>
+              <input
+                type="text"
+                id="blank-input"
+                placeholder="Your answer"
+                aria-label="Fill in the blank answer"
+              />
+              <button class="primary" type="button" id="blank-check">Check</button>
+              <p class="feedback" id="blank-feedback"></p>
+            </div>
+          </article>
+
+          <article>
+            <h3>Practice Quiz</h3>
+            <p>Quick multiple-choice check-ins to reinforce learning.</p>
+            <div class="quiz-box">
+              <p>Which language powers the backend in this demo?</p>
+              <div class="options" id="quiz-options">
+                <label><input type="radio" name="quiz" value="python" /> Python</label>
+                <label><input type="radio" name="quiz" value="java" /> Java</label>
+                <label><input type="radio" name="quiz" value="csharp" /> C#</label>
+              </div>
+              <button class="primary" type="button" id="quiz-submit">Submit</button>
+              <p class="feedback" id="quiz-feedback"></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section secondary" id="tech">
+        <div>
+          <h2>Technology Stack</h2>
+          <ul>
+            <li>Python (Flask)</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Visual Studio Code</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Deployment Ready</h2>
+          <p>
+            Designed to scale for hosted environments such as Heroku, AWS, or DigitalOcean.
+            Add authentication and storage to enable group collaboration.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Study Buddies · Collaborate, practice, and stay on track.</p>
+    </footer>
+  </body>
+</html>
